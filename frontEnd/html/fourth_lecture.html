@@ -33,6 +33,7 @@
 
 
     } */
+    /* //class selector  */
     .box{
         height: 100px;
         width: 100px;
@@ -48,24 +49,96 @@
         /* justify-content: center;
         align-items: center; */
     }
+
+    /* id selector  */
     #box4{
         grid-column: span 3;
         width: 300px;
         
     }
+    /* universal selector  */
+    *{
+        margin: 10%;
+        background-color: black;
+    }
+    /* group selectors in css  */
 
+    #h1, #h2, #h3{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        border: 2px solid black;
+        margin: 1%;
+    }
+    #parent{
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+        border: 2px solid black;
+        margin: 1%;
+    }
+    /* decendent selector in css  */
+    #parent p{
+        background-color: yellow;
+        height: 50px;
+        width: 50px;
+    }
+    #parent div{
+        background-color: green;
+        height: 50px;
+        width: 50px;
+    }
+    /* child selector in css  */    
+    #parent1>p{
+        background-color: purple;
+        height: 50px;
+        width: 50px;
+    }
+    /* attribute selector in css   */
+    input[name="password"]{
+        height: 30px;
+        width: 200px;
+        margin: 10px;
+    }
 </style>
 <body>
     <div class="container">
         <div class="box" id="box1">1</div>
         <div class="box" id="box2">2</div>
         <div class="box" id="box3">3</div>
-         <div class="box" id="box4">4</div>
+         <div class="box" id="box4">4</div> 
+    </div>
+
+    <div id="h1"></div>
+    <div id="h2"></div>
+    <div id="h3"></div>
+   
+
+    <!-- <div id="parent"> -->
+
+        <!-- <div> -->
+
+            <!-- i am div -->
+            <!-- this paragraph is direct child of div and indirect child of parent -->
+            <!-- <p>i am indirect child of parent</p> -->
         
-        
-        
+        <!-- </div> -->
+        <!-- direct child of parent-->
+        <!-- <p>i am paragraph</p> -->
         
     </div>
+
+    <div id="parent1">
+           <p>i am paragraph</p>
+        <div>
+            <p>i am paragraph</p>
+        </div>
+     
+    </div>
+
+    <input type="text" name="name" id="name" placeholder="enter your name">
+    <input type="email" name="email" id="email" placeholder="enter your email">
+    <input type="password" name="password" id="password" placeholder="enter your password">
     
 </body>
 </html>
