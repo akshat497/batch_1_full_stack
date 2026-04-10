@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: aqua;
+        border: 2px solid red;
+        margin: 1%;
+        padding: 1%;
+      }
+      .container {
+        position: relative;
+        height: 100vh;
+        background-color: black;
+      }
+
+      /* positions in css are of 5 stypes  */
+      /* static
+     relative
+     absolute
+     fixed
+     sticky */
+
+      /* .box1{
+            position: static;
+            top: 20px;
+            left: 20px;
+
+           
+        } */
+      /* #box1{
+            position: relative;
+            top: 20px;
+            left: 20px;
+            
+        } */
+
+      /* #box1{
+            position: absolute;
+            bottom: 20px;
+            right: 0px;
+            
+        } */
+      /* moves to the nearest parent which is having position relative or absolute or fixed or sticky */
+
+      /* #box1{
+            position: fixed;
+            top: 20px;
+            right: 0px;
+            
+        } */
+      /* fixed moves according to the viewport/screen  */
+      #box1 {
+        background-color: blue;
+        position: sticky;
+        top: 0px;
+       
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box2">i am div 2</div>
+      <div class="box" id="box3">i am div 3</div>
+     
+     <div class="box" id="box1">i am div 1</div>
+       <div class="box" id="box4">i am div 4</div>
+      <div class="box" id="box2">i am div 2</div>
+      <div class="box" id="box3">i am div 3</div>
+      <div class="box" id="box4">i am div 4</div>
+      <div class="box" id="box2">i am div 2</div>
+      <div class="box" id="box3">i am div 3</div>
+      <div class="box" id="box4">i am div 4</div>
+    </div>
+  </body>
+</html>
