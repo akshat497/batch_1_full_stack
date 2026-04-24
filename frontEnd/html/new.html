@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 3 types of css
+    css
+    internal
+    external
+    inline -->
+   <!-- <link rel="stylesheet" href="./external.css"> -->
+
+   <style>
+     /* //selector  { properties } */
+    /* tag selector class selector id selector group selector child selector direct child selector universal selector */ 
+     
+      p,h1{
+            font: bolder;
+            color: red;
+            background-color: aqua;
+        }
+
+        .room1{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin: 2%;
+            color: white;
+        }
+        /* //posotions in css */
+        /* static relative fixed absolute sticky */
+
+        #room1{
+            position: sticky;
+            top: 0;
+            left: 0;
+           
+            background-color: red;
+
+        }
+        /* #room2{
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: green;
+        } */
+        /* #room3{
+            position: fixed;
+            top:0;
+            right: 0;
+        
+        } */
+        #room4{
+            position:absolute;
+            background-color: black;
+            top:0;
+            right: 0;
+        }
+        #parent{
+            position: relative;
+            background-color: yellow;
+            width: 500px;
+            height: 500px;
+        }
+
+
+   </style>
+</head>
+<body>
+
+    <!-- <p style="background-color: aqua;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur odit laudantium iure. Quia deserunt quibusdam enim asperiores officiis magnam, aliquid illum laudantium recusandae! Voluptas velit quae, modi minus doloremque ut.</p> -->
+    <h1>heading</h1>
+    <p>hello i am akshat</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero repudiandae tempore odio sed quidem fugit dignissimos unde eaque. Repudiandae, quam odio! Aut veniam nihil quasi consequatur nesciunt sint dolore voluptates.</p>
+   <div class="room1" id="room1">
+   1
+   </div>
+   <div id="parent">
+     <div class="room1" id="room4">
+   3
+   </div>
+   </div>
+   <div class="room1" id="room2">
+  
+   </div>
+   <div class="room1" id="room3">
+   2
+   </div>
+  
+   <div class="room1" id="room5">
+   4
+   </div>
+</body>
+</html>

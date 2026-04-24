@@ -68,34 +68,31 @@
       .imageHolder {
         position: relative;
         display: flex;
-        height: 40vh;
-        width: inherit;
+        height: 60vh;
+        width: 100%;
         background-color: black;
         border: 2px solid white;
         padding: 5px;
       }
       .image {
-        height: inherit;
-        width: inherit;
-        border: 2px solid red;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
         position: absolute;
         animation: fade 8s infinite;
       }
       #animatedImages1 {
         animation-delay: 0s;
-        background-color: blue;
       }
       #animatedImages2 {
         animation-delay: 2s;
-        background-color: green;
       }
       #animatedImages3 {
         animation-delay: 4s;
-        background-color: yellowgreen;
       }
       #animatedImages4 {
         animation-delay: 6s;
-        background-color: yellow;
       }
 
       @keyframes fade {
@@ -118,29 +115,9 @@
         }
       }
       #Hero {
-        width: 99.9%;
+        width: 100%;
       }
-      .sliderParent {
-        border: 2px solid red;
-        padding: 1%;
-      }
-      .slider {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
 
-        overflow: hidden;
-        animation: slide 15s linear infinite;
-      }
-      @keyframes slide {
-        0% {
-          transform: translateX(100%);
-        }
-
-        100% {
-          transform: translateX(-100%);
-        }
-      }
       .box {
         height: 100px;
         width: 100px;
@@ -230,17 +207,17 @@
       input:required {
         border: 2px solid red;
       }
-      button::before{
+      button::before {
         content: "-->";
       }
-      button::after{
+      button::after {
         content: "<--";
       }
-      a{
+      a {
         position: relative;
         text-decoration: none;
       }
-      a::after{
+      a::after {
         content: "";
         position: absolute;
         left: 0;
@@ -249,13 +226,47 @@
         height: 12px;
         background-color: red;
         transform: scaleX(0);
-        transition:  0.3s ease;
+        transition: 0.3s ease;
       }
-      a:hover::after{
+      a:hover::after {
         transform: scaleX(1.1);
         width: 100%;
       }
-     
+
+      .sliderParent {
+        margin-top: 1%;
+        width: 100%;
+        overflow: hidden;
+        background: gray;
+        padding: 10px ;
+        border-radius: 12px;
+        color: white;
+      }
+
+      .slideTracker {
+        display: flex;
+        gap: 20px;
+       
+        animation: slide 8s linear infinite;
+      }
+
+      .slide {
+        min-width: 250px;
+        text-align: center;
+        padding: 15px 25px;
+
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      @keyframes slide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
     </style>
   </head>
   <body>
@@ -270,17 +281,54 @@
 
       <section id="Hero">
         <div class="imageHolder">
-          <div class="image" id="animatedImages1">1</div>
-          <div class="image" id="animatedImages2">2</div>
-          <div class="image" id="animatedImages3">3</div>
-          <div class="image" id="animateqdImages4">4</div>
+          <div>
+            <img
+              src="./image1.jpeg"
+              alt="Image 1"
+              class="image"
+              id="animatedImages1"
+              width="100%"
+            />
+          </div>
+          <div>
+            <img
+              src="./image2.jpeg"
+              alt="Image 2"
+              class="image"
+              id="animatedImages2"
+              width="100%"
+            />
+          </div>
+          <div>
+            <img
+              src="./image3.jpeg"
+              alt="Image 3"
+              class="image"
+              id="animatedImages3"
+              width="100%"
+            />
+          </div>
+          <div>
+            <img
+              src="./image4.jpeg"
+              alt="Image 4"
+              class="image"
+              id="animatedImages4"
+              width="100%"
+            />
+          </div>
         </div>
         <div class="sliderParent">
-          <div class="slider">
-            <div id="slides">React</div>
-            <div id="slides">javascript</div>
-            <div id="slides">angular</div>
-            <div id="slides">css</div>
+          <div class="slideTracker">
+            <div class="slide">React</div>
+            <div class="slide">javascript</div>
+            <div class="slide">angular</div>
+            <div class="slide">css</div>
+
+            <div class="slide">React</div>
+            <div class="slide">javascript</div>
+            <div class="slide">angular</div>
+            <div class="slide">css</div>
           </div>
         </div>
         <div class="box"></div>
