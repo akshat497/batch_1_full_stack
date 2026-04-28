@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #first{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            border: 2px solid red;
+            animation-name: Slide;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+        @keyframes Slide{
+            from{transform: translateX(0px) }
+            to{transform: translateX(100px) }
+        }
+        #second{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            border: 2px solid red; 
+            animation:bounce 2s infinite linear;
+            border-radius: 50%;
+             }
+        @keyframes bounce{
+            0%{transform: translateY(0px) translateX(0px) }
+            50%{transform: translateY(-100px) translateX(50px) }
+            100%{transform: translateY(0px) translateX(100px) }
+        }
+        #third{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            border: 2px solid red; 
+            animation: Swing 3s infinite linear;
+            
+             }
+        @keyframes Swing {
+            0%{transform: rotate(0deg) }
+            25%{transform: rotate(15deg) }
+            50%{transform: rotate(0deg) }
+            75%{transform: rotate(-15deg) }
+            100%{transform: rotate(0deg) }
+            
+        }    
+        #fourth,#fifth,#sixth{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            border: 2px solid red; 
+            animation: fade 4s infinite linear;
+             } 
+             #fourth{
+                animation-delay: 0s;
+             }
+             #fifth{
+                animation-delay: 2s;
+             }
+             #sixth{
+                animation-delay: 4s;
+             }
+             @keyframes fade {
+                0%{opacity: 1 }
+                25%{opacity: 0.5 }
+                50%{opacity: 0 }
+                75%{opacity: 0.5 }
+                100%{opacity: 1 }
+                
+             }
+             #seventh{
+                height: 200px;
+                width: 200px;
+                background-color: aqua;
+                border: 2px solid red; 
+                animation: scale 3s infinite linear;
+             }
+             @keyframes scale {
+                0%{transform: scale(1) }
+                25%{transform: scale(1.5) }
+                50%{transform: scale(1) }
+                75%{transform: scale(0.5) }
+                100%{transform: scale(1) }
+             }
+             #loder{
+                width: 100px;
+                height: 100px;
+                margin: 2%;
+               
+                border:5px solid gray;
+                 border-top:5px solid red;
+                 position: absolute;
+             
+                   
+                  
+           
+                border-radius: 50%;
+                animation: spin 1s infinite linear;
+             }
+             @keyframes spin{
+                0%{transform: rotate(0deg) }
+                100%{transform: rotate(360deg) }
+             }
+            #loderText{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+              
+                
+            }
+
+    </style>
+</head>
+<body>
+    <div id="first">
+        <h1>My Animation</h1>
+        <p>This is a simple animation example.</p>
+    </div>
+    <div id="second">
+   
+    </div>
+    <div id="third">
+
+    </div>
+    <div id="fourth">
+
+    </div>
+    <div id="fifth">
+      
+    </div>
+    <div id="sixth"></div>
+    <div id="seventh"></div>
+
+  <div id="loderText">
+    <div>Loading...</div>
+      <div id="loder"></div>
+  </div>
+    
+</body>
+</html>
