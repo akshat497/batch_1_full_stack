@@ -1,0 +1,1 @@
+console.log("Hello, World! external JavaScript file is working.");
