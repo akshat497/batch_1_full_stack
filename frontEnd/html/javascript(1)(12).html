@@ -37,6 +37,23 @@
         console.log(PI)
      console.log("hello world");  //this is a part of brownser console,
      //  it is used to log messages to the console. It is a useful tool for debugging and testing code.
+    debugger
+console.log("1")
+debugger
+setTimeout(() => {
+    console.log("2")
+    
+}, 2000);
+debugger
+Promise.resolve().then(() => {
+
+    console.log("3")
+    Promise.resolve().then(() => {
+        console.log("4")
+    })
+})
+debugger
+console.log("5")
     </script>
     <script src="javascript(1)(12).js"></script>
        <!-- <button onmouseleave="alert('hello world')">Click me</button>

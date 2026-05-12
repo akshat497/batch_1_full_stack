@@ -100,10 +100,119 @@ console.log(typeof "akshat")
 console.log(typeof 12)
 console.log(typeof true)
 console.log(typeof undefined)
-console.log(typeof null)
-console.log(typeof [1,2,3,4])
+console.log(typeof null).  //obejct
+console.log(typeof [1,2,3,4]) //object
 console.log(typeof {name:"akshat"})
 console.log(typeof function(){})
 
+//js ky ander array ko special kind of object mana jata hai
+[1,2,3,4]
+
+
+{
+0:1
+1:2
+2:3
+3:4
+length:4
+}
+
+//it is a bug of js. 
+// early 1995. jo values they are stored in binary type tags
+// obejcts 000
+// null was represented as all zero bits 000
+
+// null-->000-->interprated as object 
+
 
 //
+
+
+//event looping in js
+
+//single threaded language
+
+
+// saray task ek ek krky run hoty hai 
+
+// agar ek task chl rha hai tab tk usra task shuru nhi ho skta 
+
+// call stack ky ander jitny bhi task hoty hai vo synchronus way mai perform hoty hai 
+
+
+// why js is async 
+
+//api calls
+//set timeout 
+
+// sbkuch block ho jana chiye kuki ye multitask nhi kr skti according to its defination 
+
+// js is single threaded 
+
+//async behaviour of js 
+
+//js is a restaurant 
+
+// call stack   (chef)
+//   code execute line by line
+//.  only one task at a time
+
+// web apis (kitchen helpers)
+   // provided by the browser
+   //it handles async tasks 
+     //settimeout.  timer 
+     //fetch     to get data from the backedn
+
+
+// call back queue (waiting area)
+   //complted async task
+// event loop (manger)
+ //checks is call stack empty? or agr empty hai toh jo waiting are mai task hai unko callk stack mai dal do
+
+
+//          [ CALL STACK ]
+//               ↓
+//         (empty ?)
+//               ↓ YES
+//    ┌───────────────┐
+//    │ MICROTASKS 🔥 │  ← Promise.then()
+//    └───────────────┘
+//               ↓
+//    ┌───────────────┐
+//    │ MACROTASK 🕒  │  ← setTimeout
+//    └───────────────┘
+//               ↓
+//            Repeat
+
+
+//                 ┌───────────────────────┐
+//                 │      CALL STACK       │
+//                 │   (Executes Code)     │
+//                 └─────────┬─────────────┘
+//                           │
+//                           ▼
+//                 ┌───────────────────────┐
+//                 │      WEB APIs         │
+//                 │ (setTimeout, fetch)   │
+//                 └─────────┬─────────────┘
+//                           │
+//           ┌───────────────┴────────────────┐
+//           ▼                                ▼
+// ┌───────────────────────┐     ┌───────────────────────┐
+// │   MICROTASK QUEUE     │     │   MACROTASK QUEUE     │
+// │ (Promises, then)      │     │ (setTimeout, events)  │
+// └─────────┬─────────────┘     └─────────┬─────────────┘
+//           │                             │
+//           └───────────────┬─────────────┘
+//                           ▼
+//                 ┌───────────────────────┐
+//                 │      EVENT LOOP       │
+//                 │  (The Manager 🧠)     │
+//                 └─────────┬─────────────┘
+//                           │
+//                           ▼
+//                 ┌───────────────────────┐
+//                 │      CALL STACK       │
+//                 │   (Runs Tasks Again)  │
+//                 └───────────────────────┘
+
