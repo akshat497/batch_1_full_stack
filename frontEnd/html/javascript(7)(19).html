@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //print even numbers from 1 to 20
+      for (let i = 1; i <= 20; i++) {
+        //even number are those jo 2 ki table mai aaty hai
+        if (i % 2 == 0) {
+          console.log(i);
+        }
+      }
+      //print odd numbers from 1 to 20
+      for (let i = 1; i <= 20; i++) {
+        //even number are those jo 2 ki table mai aaty hai
+        if (i % 2 !== 0) {
+          console.log(i);
+        }
+      }
+      //find prime numbers
+      //number which are divisible by 1 and itself
+      // userInput=6
+      // count=0;
+      // for (let i = 2; i < userInput; i++) {
+      //     debugger
+      //      let a=userInput%i;
+      //     if (userInput % i == 0) {
+
+      //         debugger
+      //         count++;
+      //     }
+      // }
+      // if(count==0){
+      //     debugger
+      //     console.log("prime number");
+      // }
+      // else{
+      //     debugger
+      //     console.log("not a prime number");
+      // }
+
+      // //while loop
+      // while(true){
+
+      // }
+
+      //nested loop
+      // table=5;
+      // count=10
+
+      // for(let i=1;i<=table;i++){
+      //     debugger
+
+      //     for(let j=1;j<=count;j++){
+      //         debugger
+      //         console.log(`${i}*${j}=${i*j}`);
+      //     }
+      // }
+      //functions of array
+//index        0.    1.     2.       3.     4.  5
+      array = [12, 12.12, "string", true, false,12];
+      console.log(array);
+      //push
+      array.push("new element");
+      console.log(array);
+      //pop
+      array.pop();
+      console.log(array);
+
+      //unshift
+      array.unshift("new element at start");
+      console.log(array);
+
+      //shift
+      array.shift();
+      console.log(array);
+
+      //indexOf
+      console.log(array.indexOf(12));
+
+      //lastIndexOf
+      console.log(array.lastIndexOf(12));
+
+      //includes
+      console.log(array.includes(22));
+
+      //slice
+      console.log(array.slice(1, 4));
+
+      //splice
+      //array.splice(starting index, number of elements to be removed, elements to be added)
+      array.splice(4, 2, "new element");
+      console.log(array);
+    </script>
+  </body>
+</html>
