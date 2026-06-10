@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("first");//highest priority is of callstack
+      setTimeout(function () {
+        console.log("second");
+      }, 2000);//callstack-->webapi(processing)-->callbackqueue    priority is low
+                                        //            |
+                                        //            |
+                //.                 callstack  <--eventloop.  first eventloop will check if callstack is empty or not
+
+      Promise.resolve().then(function () {
+        console.log("fourth");
+      });
+
+      //callstack-->microtaskQueue    priority is hight
+        //            |
+        //            |
+    //  callstack  <--eventloop.  first eventloop will check if callstack is empty or not
+
+      console.log("third");//callstack
+    </script>
+  </body>
+</html>
